@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>オリパ自動設計シミュレーター</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>オリパ自動設計シミュレーター</h1>
+
+  <div id="inputArea">
+    <label>賭け金（円）<input id="betAmount" type="number" value="1000"></label><br>
+    <label>目標利益率（例：0.3）<input id="targetProfitRate" type="number" step="0.01" value="0.3"></label><br>
+    <label>固定購入数<input id="fixedCount" type="number" value="2"></label><br>
+    <label>プレイヤー数<input id="playerCount" type="number" value="10"></label><br><br>
+
+    <label>目標 勝率（%）<input id="targetWinRate" type="number" value="80"></label><br>
+    <label>目標 赤字率（%）<input id="targetLossRate" type="number" value="10"></label><br>
+    <label>目標 利益達成率（%）<input id="targetProfitAchieveRate" type="number" value="60"></label><br>
+    <label>目標 完売率（%）<input id="targetSelloutRate" type="number" value="90"></label><br><br>
+
+    <button onclick="runSimulation()">ベストパターンを探す</button>
+  </div>
+
+  <div id="resultArea"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
